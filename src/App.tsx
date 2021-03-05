@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import RecipeReviewCard from './NiceCard';
 import NotFoundCard from './NotFound';
