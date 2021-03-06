@@ -46,6 +46,9 @@ export interface CardProps {
 export const RecipeReviewCard = (props: CardProps) => {
   const classes = useStyles();
 
+  const niceDate = new Date(Date.parse(props.dateStr));
+  const value = niceDate.toDateString();
+
   return (
     <Card className={classes.root}>
       <CardHeader
@@ -55,7 +58,7 @@ export const RecipeReviewCard = (props: CardProps) => {
           </Avatar>
         }
         title={props.name}
-        subheader={props.dateStr}
+        subheader={value}
       />
       <CardMedia
         className={classes.media}

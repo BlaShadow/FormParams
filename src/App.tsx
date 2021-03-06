@@ -9,8 +9,8 @@ const parseParameters = () => {
   const rawItems = window.location.search.replace("?", "").split("&");
 
   const result = rawItems.map((item) => {
-      const [key, value] = item.split("=")
-      return {[key]: decodeURI(value)}
+    const [key, value] = item.split("=")
+      return {[key]: decodeURIComponent(value)}
     }).reduce((prev, item) => {
       return {
         ...prev,
