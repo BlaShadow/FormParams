@@ -10,7 +10,7 @@ const parseParameters = () => {
 
   const result = rawItems.map((item) => {
       const [key, value] = item.split("=")
-      return {[key]: value}
+      return {[key]: decodeURI(value)}
     }).reduce((prev, item) => {
       return {
         ...prev,
